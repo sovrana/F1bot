@@ -32,5 +32,24 @@
         </footer>
     </div>
     <script src="script.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/@n8n/chat/dist/style.css" rel="stylesheet" />
+    <script type="module">
+        import { createChat } from 'https://cdn.jsdelivr.net/npm/@n8n/chat/dist/chat.bundle.es.js';
+
+        createChat({
+            webhookUrl: 'https://n8n.sohiyou.com/webhook/40e5c98d-7aa6-4eff-8aa4-d822b8560ce8/chat',
+            initialMessages: [
+                'Hi there! 👋',
+                'I am F1bot. How can I help you with Formula 1 today?'
+            ],
+            i18n: {
+                en: {
+                    title: 'F1bot Chat',
+                    subtitle: "Ask me anything about Formula 1!",
+                    inputPlaceholder: 'Type your F1 question...',
+                },
+            }
+        });
+    </script>
 </body>
 </html> 
